@@ -11,7 +11,7 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public long id;
+    public int id;
     public String title;
     @ElementCollection
     public List<Integer> participants;
@@ -29,11 +29,11 @@ public class Event {
     }
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -45,10 +45,10 @@ public class Event {
         this.title = title;
     }
 
-    public List<Long> getParticipants() {
+    public List<Integer> getParticipants() {
         return participants;
     }
-    public void setParticipants(List<Long> participants) {
+    public void setParticipants(List<Integer> participants) {
         this.participants = participants;
     }
 
@@ -56,11 +56,11 @@ public class Event {
         this.participants.add(participant.getId());
     }
 
-    public List<Long> getExpenses() {
+    public List<Integer> getExpenses() {
         return expenses;
     }
 
-    public void setExpenses(List<Long> expenses) {
+    public void setExpenses(List<Integer> expenses) {
         this.expenses = expenses;
     }
 

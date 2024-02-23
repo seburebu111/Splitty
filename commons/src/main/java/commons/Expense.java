@@ -28,7 +28,7 @@ public class Expense {
         this.amount = amount;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 

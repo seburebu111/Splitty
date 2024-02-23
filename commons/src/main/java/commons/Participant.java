@@ -28,7 +28,7 @@ public class Participant {
         this.iban = iban;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
