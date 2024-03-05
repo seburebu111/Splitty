@@ -1,10 +1,10 @@
-| Key          | Value                                                                   |
-| ------------ | ----------------------------------------------------------------------- |
-| Date:        | 27/02/2024                                                              |
-| Time:        | 16:45 - 17:45                                                           |
-| Location:    | Drebbleweg                                                              |
-| Chair        | Sebastian Mustață                                                       |
-| Minute Taker | Teodor Mocanu                                                           |
+| Key          | Value                                                                                                           |
+| ------------ |-----------------------------------------------------------------------------------------------------------------|
+| Date:        | 05/03/2024                                                                                                      |
+| Time:        | 16:45 - 17:45                                                                                                   |
+| Location:    | Drebbleweg                                                                                                      |
+| Chair        | Sebastian Mustață                                                                                               |
+| Minute Taker | Teodor Mocanu                                                                                                   |
 | Attendees:   | Mario Nicolae <br/>Mihai Nicolae<br/>Matei Dumitrescu<br/>Matej Kliment<br/>Teodor Mocanu</br>Sebastian Mustață |
 
 Agenda Items:
