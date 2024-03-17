@@ -10,12 +10,12 @@ public class DebtKey implements Serializable{
     @Column(name = "event_id")
     private long eventId;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "debt_id")
     private long id;
 
-    public DebtKey(long eventId) {
+    public DebtKey(long eventId, long id) {
         this.eventId = eventId;
+        this.id = id;
     }
 
     @SuppressWarnings("unused")

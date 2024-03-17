@@ -10,7 +10,9 @@ import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 @Entity
 public class Debt {
-
+    @Transient
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long tempId;
     @EmbeddedId
     private DebtKey debtKey;
 
@@ -40,7 +42,7 @@ public class Debt {
     }
 
     public Debt(Event event, Participant debtor, Participant creditor, double amount) {
-        this.debtKey = new DebtKey(event.getId());
+        this.debtKey = new DebtKey(event.getId(), tempId);
         this.event = event;
         this.debtor = debtor;
         this.creditor = creditor;

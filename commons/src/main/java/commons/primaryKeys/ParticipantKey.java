@@ -10,12 +10,12 @@ public class ParticipantKey implements Serializable {
     @Column(name = "event_id")
     private long eventId;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "participant_id")
     private long id;
 
-    public ParticipantKey(long eventId) {
+    public ParticipantKey(long eventId, long id) {
         this.eventId = eventId;
+        this.id = id;
     }
 
     @SuppressWarnings("unused")

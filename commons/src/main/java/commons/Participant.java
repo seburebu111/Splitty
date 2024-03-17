@@ -13,6 +13,9 @@ import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 @Entity
 public class Participant {
+    @Transient
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long tempId;
     @EmbeddedId
     private ParticipantKey participantKey;
 
@@ -35,7 +38,7 @@ public class Participant {
     public Participant(){ }
 
     public Participant(Event event, String name, String email, String iban, String bic){
-        this.participantKey = new ParticipantKey(event.getId());
+        this.participantKey = new ParticipantKey(event.getId(), tempId);
         this.event = event;
         this.expensesPaidBy = new ArrayList<>();
         this.expensesToPay = new ArrayList<>();
@@ -46,7 +49,7 @@ public class Participant {
     }
 
     public Participant(String name, Event event){
-        this.participantKey = new ParticipantKey(event.getId());
+        this.participantKey = new ParticipantKey(event.getId(), tempId);
         this.expensesPaidBy = new ArrayList<>();
         this.expensesToPay = new ArrayList<>();
         this.event = event;
