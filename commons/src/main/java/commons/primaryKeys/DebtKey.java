@@ -1,6 +1,7 @@
 package commons.primaryKeys;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.*;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,12 +11,13 @@ public class DebtKey implements Serializable{
     @Column(name = "event_id")
     private long eventId;
 
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = "debt_id")
     private long id;
 
-    public DebtKey(long eventId, long id) {
+    public DebtKey(long eventId) {
         this.eventId = eventId;
-        this.id = id;
     }
 
     @SuppressWarnings("unused")

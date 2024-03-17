@@ -13,9 +13,7 @@ import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 @Entity
 public class Expense {
-    @Transient
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long tempId;
+
     @EmbeddedId
     private ExpenseKey expenseKey;
 
@@ -56,7 +54,7 @@ public class Expense {
 
     public Expense(Event event, LocalDate localDate, Participant payer, List<Participant> owings, String title,
                    float amount) {
-        this.expenseKey = new ExpenseKey(event.getId(), tempId);
+        this.expenseKey = new ExpenseKey(event.getId());
         this.event = event;
         this.localDate = localDate;
         this.payer = payer;

@@ -1,6 +1,7 @@
 package commons.primaryKeys;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,12 +11,13 @@ public class ExpenseKey implements Serializable{
     @Column(name = "event_id")
     private long eventId;
 
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = "expense_id")
     private long id;
 
-    public ExpenseKey(long eventId, long id) {
+    public ExpenseKey(long eventId) {
         this.eventId = eventId;
-        this.id = id;
     }
 
     @SuppressWarnings("unused")
